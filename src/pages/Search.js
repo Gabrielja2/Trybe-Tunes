@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import AlbumCollection from '../Components/AlbumCollection';
 import Header from '../Components/Header';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 
@@ -73,26 +73,10 @@ class Search extends Component {
           </button>
         </form>
         { isLoading ? <p>Carregando...</p> : (
-          <div>
-            {colection.length === 0 && <p>Nenhum álbum foi encontrado</p>}
-            {colection.length > 0 && (
-              <span>
-                { `Resultado de álbuns de: ${artista}
-                `}
-              </span>)}
-            {colection.map((disc, index) => (
-              <div key={ index }>
-                <p>{disc.collectionName}</p>
-                <Link
-                  data-testid={ `link-to-album-${disc.collectionId}` }
-                  to={ `/album/${disc.collectionId}` }
-                >
-                  <img src={ disc.artworkUrl100 } alt={ disc.collectionName } />
-                </Link>
-                <p>{ disc.artistName }</p>
-              </div>
-            ))}
-          </div>
+          <AlbumCollection
+            artista={ artista }
+            colection={ colection }
+          />
         )}
       </div>
     );
