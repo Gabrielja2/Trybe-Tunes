@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-class AlbumCollection extends React.Component {
+class AlbumCard extends React.Component {
   render() {
     const { colection, artista } = this.props;
     return (
@@ -32,9 +32,9 @@ class AlbumCollection extends React.Component {
   }
 }
 
-AlbumCollection.propTypes = {
+AlbumCard.propTypes = {
   colection: PropTypes.arrayOf(PropTypes.object).isRequired,
   artista: PropTypes.string.isRequired,
 };
 
-export default AlbumCollection;
+export default AlbumCard;

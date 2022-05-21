@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AlbumCollection from '../Components/AlbumCollection';
+import AlbumCard from '../Components/AlbumCard';
 import Header from '../Components/Header';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 
@@ -73,7 +73,7 @@ class Search extends Component {
           </button>
         </form>
         { isLoading ? <p>Carregando...</p> : (
-          <AlbumCollection
+          <AlbumCard
             artista={ artista }
             colection={ colection }
           />
