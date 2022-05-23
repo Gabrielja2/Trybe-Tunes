@@ -18,7 +18,7 @@ class MusicCard extends Component {
     const favoriteSong = getFavorite
       ? getFavorite.some((song) => song.trackId === trackId)
       : false;
-    return favoriteSong;
+    this.setState({ isFavorite: favoriteSong });
   }
 
    onAddFavorite = async () => {
