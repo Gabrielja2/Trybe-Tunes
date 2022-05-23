@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Header from '../Components/Header';
 import getMusics from '../services/musicsAPI';
 import MusicCard from '../Components/MusicCard';
 
@@ -27,7 +26,6 @@ class Album extends Component {
     const { musics, artista } = this.state;
     return (
       <div data-testid="page-album">
-        <Header />
         <p data-testid="artist-name">
           {' '}
           {artista.artistName}

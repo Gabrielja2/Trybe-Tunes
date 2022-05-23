@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import AlbumCard from '../Components/AlbumCard';
-import Header from '../Components/Header';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 
 class Search extends Component {
@@ -52,7 +51,6 @@ class Search extends Component {
     const { isButtonDisabled, artistInput, isLoading, colection, artista } = this.state;
     return (
       <div data-testid="page-search">
-        <Header />
         <form>
           <label htmlFor="search-artist-input">
             <input
